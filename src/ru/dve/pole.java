@@ -39,11 +39,23 @@ public class pole extends JPanel
 
     private JButton btn1,btn2;
 
+// Переменная для реализации логики игры
+
+    private game myGame;
+
 // Конструктор класса
 
     public pole()
 
     {
+
+// Создаем объект новой игры
+
+        myGame = new game();
+
+// Запускаем игру
+
+        myGame.start();
 
 //Попытка загрузки всех изображений для игры
 
@@ -109,9 +121,13 @@ public class pole extends JPanel
 
         btn1.addActionListener(new ActionListener() {
 
-//Обработчик события при нажатии на кнопку Новая игра
+// Обработчик события при нажатии на кнопку Новая игра
 
             public void actionPerformed(ActionEvent arg0) {
+
+// Запуск -начало игры
+
+                myGame.start();
 
             }
 
@@ -179,6 +195,30 @@ public class pole extends JPanel
 
         gr.drawString("Игрок", 590, 50);
 
+
+
+//Отрисовка игрового поля Игрока на основании массива
+
+        for (int i = 0; i < 10; i++) {
+
+            for (int j = 0; j < 10; j++) {
+
+
+
+// Если это палуба корабля
+
+                if ((myGame.masPlay[i][j] >= 1) && (myGame.masPlay[i][j] <= 4)) {
+
+                    gr.drawImage(paluba, 500 + j * 30, 100 + i * 30, 30, 30, null);
+
+                }
+
+            }
+
+        }
+
+
+
 //Отрисовка сетки игрового поля из синих линий
 
         gr.setColor(Color.BLUE);
@@ -193,7 +233,7 @@ public class pole extends JPanel
 
             gr.drawLine(100, 100+i*30, 400, 100+i*30);
 
-// Рисование линий сетки игрового поля Игрока
+// Рисование линий сетки игрового поля Человека
 
             gr.drawLine(500+i*30, 100, 500+i*30, 400);
 
@@ -232,4 +272,3 @@ public class pole extends JPanel
     }
 
 }
-
