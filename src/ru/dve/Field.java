@@ -20,10 +20,9 @@ import javax.imageio.*;
 import java.io.*;
 
 
-
 //Класс панели игрового поля
 
-public class pole extends JPanel
+public class Field extends JPanel
 
 {
 
@@ -37,7 +36,7 @@ public class pole extends JPanel
 
 // Две кнопки
 
-    private JButton btn1,btn2;
+    private JButton btn1, btn2;
 
 // Переменная для реализации логики игры
 
@@ -45,7 +44,7 @@ public class pole extends JPanel
 
 // Конструктор класса
 
-    public pole()
+    public Field()
 
     {
 
@@ -77,15 +76,14 @@ public class pole extends JPanel
 
             bomba = ImageIO.read(new File("F:\\SeaBatell\\src\\ru\\dve\\img\\bomba.png"));
 
+        } catch (Exception ex) {
         }
-
-        catch (Exception ex) {}
 
 //Создаем, настраиваем и запускаем таймер
 
 //для отрисовки игрового поля
 
-        tmDraw = new Timer(50,new ActionListener() {
+        tmDraw = new Timer(50, new ActionListener() {
 
             @Override
 
@@ -115,7 +113,7 @@ public class pole extends JPanel
 
         btn1.setForeground(Color.BLUE);
 
-        btn1.setFont(new Font("serif",0,30));
+        btn1.setFont(new Font("serif", 0, 30));
 
         btn1.setBounds(130, 450, 200, 80);
 
@@ -143,7 +141,7 @@ public class pole extends JPanel
 
         btn2.setForeground(Color.RED);
 
-        btn2.setFont(new Font("serif",0,30));
+        btn2.setFont(new Font("serif", 0, 30));
 
         btn2.setBounds(530, 450, 200, 80);
 
@@ -166,7 +164,6 @@ public class pole extends JPanel
     }
 
 
-
 // Метод отрисовки
 
     public void paintComponent(Graphics gr)
@@ -179,11 +176,11 @@ public class pole extends JPanel
 
 //Отрисовка фона
 
-        gr.drawImage(fon,0,0,900,600,null);
+        gr.drawImage(fon, 0, 0, 900, 600, null);
 
 //Установка шрифта
 
-        gr.setFont(new Font("serif",3,40));
+        gr.setFont(new Font("serif", 3, 40));
 
 //Установка цвета
 
@@ -196,13 +193,11 @@ public class pole extends JPanel
         gr.drawString("Игрок", 590, 50);
 
 
-
 //Отрисовка игрового поля Игрока на основании массива
 
         for (int i = 0; i < 10; i++) {
 
             for (int j = 0; j < 10; j++) {
-
 
 
 // Если это палуба корабля
@@ -218,7 +213,6 @@ public class pole extends JPanel
         }
 
 
-
 //Отрисовка сетки игрового поля из синих линий
 
         gr.setColor(Color.BLUE);
@@ -229,21 +223,21 @@ public class pole extends JPanel
 
 // Рисование линий сетки игрового поля Компьютера
 
-            gr.drawLine(100+i*30, 100, 100+i*30, 400);
+            gr.drawLine(100 + i * 30, 100, 100 + i * 30, 400);
 
-            gr.drawLine(100, 100+i*30, 400, 100+i*30);
+            gr.drawLine(100, 100 + i * 30, 400, 100 + i * 30);
 
 // Рисование линий сетки игрового поля Человека
 
-            gr.drawLine(500+i*30, 100, 500+i*30, 400);
+            gr.drawLine(500 + i * 30, 100, 500 + i * 30, 400);
 
-            gr.drawLine(500, 100+i*30, 800, 100+i*30);
+            gr.drawLine(500, 100 + i * 30, 800, 100 + i * 30);
 
         }
 
 //Установка шрифта
 
-        gr.setFont(new Font("serif",0,20));
+        gr.setFont(new Font("serif", 0, 20));
 
 //Установка цвета
 
@@ -257,15 +251,15 @@ public class pole extends JPanel
 
 // Вывод цифр
 
-            gr.drawString(""+i, 73, 93+i*30);
+            gr.drawString("" + i, 73, 93 + i * 30);
 
-            gr.drawString(""+i, 473, 93+i*30);
+            gr.drawString("" + i, 473, 93 + i * 30);
 
 // Вывод букв
 
-            gr.drawString(""+(char)('A'+i-1), 78+i*30, 93);
+            gr.drawString("" + (char) ('A' + i - 1), 78 + i * 30, 93);
 
-            gr.drawString(""+(char)('A'+i-1), 478+i*30, 93);
+            gr.drawString("" + (char) ('A' + i - 1), 478 + i * 30, 93);
 
         }
 

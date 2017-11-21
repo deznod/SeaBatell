@@ -89,21 +89,21 @@ public class game {
 
     private void okrBegin(int[][] mas, int i, int j, int val) {
 
-        setOkr(mas, i-1, j-1, val); // сверху слева
+        setOkr(mas, i - 1, j - 1, val); // сверху слева
 
-        setOkr(mas, i-1, j, val); // сверху
+        setOkr(mas, i - 1, j, val); // сверху
 
-        setOkr(mas, i-1, j+1, val); // сверху справа
+        setOkr(mas, i - 1, j + 1, val); // сверху справа
 
-        setOkr(mas, i, j+1, val); // справа
+        setOkr(mas, i, j + 1, val); // справа
 
-        setOkr(mas, i+1, j+1, val); // снизу справа
+        setOkr(mas, i + 1, j + 1, val); // снизу справа
 
-        setOkr(mas, i+1, j, val); // снизу
+        setOkr(mas, i + 1, j, val); // снизу
 
-        setOkr(mas, i+1, j-1, val); // снизу слева
+        setOkr(mas, i + 1, j - 1, val); // снизу слева
 
-        setOkr(mas, i, j-1, val); // слева
+        setOkr(mas, i, j - 1, val); // слева
 
     }
     //Создание четырех однопалубных кораблей
@@ -125,7 +125,6 @@ public class game {
                 int j = (int) (Math.random() * 10);
 
 // Проверяем, что там ничего нет и можно разместить корабль
-
 
 
                 if (mas[i][j] == 0) {

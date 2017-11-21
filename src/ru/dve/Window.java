@@ -6,22 +6,21 @@ import java.awt.*;
 import javax.swing.*;
 
 
-
 //Класс окна игрового поля
 
-public class okno extends JFrame
+public class Window extends JFrame
 
 {
 
 // Конструктор класса
 
-    public okno()
+    public Window()
 
     {
 
 //Создание объекта панели и подключения ее к окну
 
-        pole pan = new pole();
+        Field pan = new Field();
 
         Container cont = getContentPane();
 
