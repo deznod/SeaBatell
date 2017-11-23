@@ -4,7 +4,7 @@
 Данный клас содержит в себе поле игрока и компьютера , а так же рисует графику в игре.
 ## <a href="https://github.com/deznod/SeaBatell/blob/master/src/ru/dve/Play.java">Play</a>
 Данный класс предназначен для запуска игры.
-## <a herf="https://github.com/deznod/SeaBatell/blob/master/src/ru/dve/Window.java">Window</a>
+## <a href="https://github.com/deznod/SeaBatell/blob/master/src/ru/dve/Window.java">Window</a>
 Данный класс создает окно игры и задает его размеры.
-## <a herf="https://github.com/deznod/SeaBatell/blob/master/src/ru/dve/game.java">Game</a>
+## <a href="https://github.com/deznod/SeaBatell/blob/master/src/ru/dve/game.java">Game</a>
 Данный класс содержит логику игры.
