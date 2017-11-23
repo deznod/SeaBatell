@@ -1,7 +1,7 @@
 package ru.dve;
 
 /**
- * Created by dubin on 30.10.2017.
+ * Класс позволяющет запустить проект
  */
 public class Play  {
     public static void main(String[] args){
